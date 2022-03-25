@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 const head = function(arr) {
   return arr[0];
-}
+};
 
 console.log(head([10, 5, 15]));
 //test code
