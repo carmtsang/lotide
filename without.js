@@ -7,22 +7,27 @@ const assertArraysEqual = function(arr1, arr2) {
       }
     }
   } else {
-    console.log(`\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${arr1} === ${arr2}`);;
+    console.log(`\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${arr1} === ${arr2}`);
   }
 };
 
 //filter out array and remove unwanted items
-
 const without = function(source, itemsToRemove) {
   const newArray = [];
   for (let i = 0; i < source.length; i++) { //loop through source array
-    if (itemsToRemove[i] !== source[i]) { // if itemsToRemove
+    if (itemsToRemove[i] !== source[i]) { // if different from itemsToRemove, push it to new array
       newArray.push(source[i]);
     }
   }
   return newArray;
-}
+};
 
 //test scenario
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+without([1, 2, 3], [1]); // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"]);// => ["1", "2"]
+
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);

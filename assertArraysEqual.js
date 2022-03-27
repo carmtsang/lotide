@@ -7,9 +7,8 @@ const assertArraysEqual = function(arr1, arr2) {
       }
     }
   } else {
-    console.log(`\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${arr1} === ${arr2}`);;
+    console.log(`\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${arr1} === ${arr2}`);
   }
-  
 };
 
 //test code
