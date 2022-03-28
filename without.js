@@ -1,16 +1,28 @@
-const assertArraysEqual = function(arr1, arr2) {
-  const passed = `\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${arr1} === ${arr2}`;
-  const failed = `\uD83D\uDE31\uD83D\uDE31\uD83D\uDE31 Assertion Failed: ${arr1} !== ${arr2}`;
-  if (arr1.length !== arr2.length) {
+const assertArraysEqual = function(actual, expected) {
+  const passed = `\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${actual} === ${expected}`;
+  const failed = `\uD83D\uDE31\uD83D\uDE31\uD83D\uDE31 Assertion Failed: ${actual} !== ${expected}`;
+  if (actual.length !== expected.length) {
     console.log(failed);
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
+    for (let i = 0; i < actual.length; i++) {
+      if (actual[i] !== expected[i]) {
         console.log(failed);
       }
     }
   } else {
     console.log(passed);
   }
+};
+
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 //filter out array and remove unwanted items
