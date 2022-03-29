@@ -33,10 +33,13 @@ const assertArraysEqual = function(actual, expected) {
 const middle = function(array) {
   let arrayMid = [];
   let midIndex = Math.floor(array.length / 2);
-  if (array.length > 3 && array.length % 2 === 0) {
-    arrayMid.push(array[midIndex] - 1);
+  //Math.floor for whole number for the middle of the array.
+  if (array.length > 2 && array.length % 2 === 0) {
+  //if array has more than 2 values and the # of values is even.
+    arrayMid.push(array[midIndex] - 1); 
+    // -1 to capture the value in the index before.
     arrayMid.push(array[midIndex]);
-  } else if (array.length > 3 && array.length % 2 !== 0) {
+  } else if (array.length > 2 && array.length % 2 !== 0) {
     arrayMid.push(array[midIndex]);
   }
   return arrayMid;
