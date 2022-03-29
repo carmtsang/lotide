@@ -18,10 +18,10 @@ const countLetters = function(sentence) {
       }
     }
   }
-  console.log(results);
-}
+  return results;
+};
 
 //test cases
 countLetters('Carmen Tsang');
-countLetters('Lighthouse Labs')
-countLetters('bananarama')
+countLetters('Lighthouse Labs');
+countLetters('bananarama');
