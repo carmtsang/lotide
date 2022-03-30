@@ -35,11 +35,10 @@ const letterPositions = function(sentence) {
       if (!results[sentence[i]]) { //if there is value, add an array of the index to the key
         results[sentence[i]] = [i];
       } else if (results[sentence[i]]) { // if there is a key, push the index to existing key
-       results[sentence[i]].push(i);
+        results[sentence[i]].push(i);
       }
     }
   }
-
   console.log(results);
 };
 
