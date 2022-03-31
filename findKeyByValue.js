@@ -9,12 +9,19 @@ const assertEqual = function(actual, expected) {
 };
 
 //loop through the object
-//if
+//if searchValue = object value
+//return object key
 
-const findKeyByValue = function(object, value) {
+const findKeyByValue = function(objList, searchValue) {
+  let result = "";
+  const keys = Object.keys(objList);
+  for (const key of keys) {
+    
 
-}
-
+  }
+  
+  return result;
+};
 
 //test case
 const bestTVShowsByGenre = { 
@@ -23,15 +30,17 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+findKeyByValue(bestTVShowsByGenre, "The Wire");
 
-const bestMoviesByGenre = {
-  sci_fi: "Star Trek",
-  comedy: "Hard and Kumar",
-  drama: "Parasite",
-  romcom: "The Holiday"
-};
+//assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
-assertEqual(findKeyByValue(bestMoviesByGenre, "Parasite"), "drama");
-assertEqual(findKeyByValue(bestMoviesByGenre, "ShaolinSoccer"), undefined);
+// const bestMoviesByGenre = {
+//   sci_fi: "Star Trek",
+//   comedy: "Hard and Kumar",
+//   drama: "Parasite",
+//   romcom: "The Holiday"
+// };
+
+// assertEqual(findKeyByValue(bestMoviesByGenre, "Parasite"), "drama");
+// assertEqual(findKeyByValue(bestMoviesByGenre, "ShaolinSoccer"), undefined);
