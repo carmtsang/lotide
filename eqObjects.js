@@ -53,10 +53,10 @@ const eqObjects = function(object1, object2) {
   const objKeys2 = Object.keys(object2);
   let result;
 
-  if (objKeys1.length !== objKeys2.length) { //if obj1 length does not equal ob2 length 
+  if (objKeys1.length !== objKeys2.length) { //if obj1 length does not equal ob2 length
     result = false;
     return result; //return false and exit out of the function
-  };
+  }
 
   for (const key of objKeys1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { //if obj 1 and ob2 have array
@@ -71,7 +71,7 @@ const eqObjects = function(object1, object2) {
       }
     }
   }
-  return result; 
+  return result;
 };
 
 
