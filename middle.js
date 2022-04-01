@@ -13,17 +13,13 @@ const eqArrays = function(arr1, arr2) {
 const assertArraysEqual = function(actual, expected) {
   const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
   const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
-  if (actual.length !== expected.length) {
-    console.log(failed);
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        console.log(failed);
-      }
-    }
-  } else {
+  if (eqArrays(actual, expected)) {
     console.log(passed);
+  } else {
+    console.log(failed);
   }
 };
+
 
 // take in an array and return the middle-most elements of the given array
 //for array with 1 or two elements, there is no middle - return an empty array
