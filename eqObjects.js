@@ -1,5 +1,5 @@
 const assertEqual = function(actual, expected) {
-  const passed = `\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${actual} === ${expected}`;
+  const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
   const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
   if (actual === expected) {
     console.log(passed);
@@ -83,4 +83,4 @@ assertEqual(eqObjects(cd, dc), true);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 eqObjects(cd, cd2); // => false
-assertEqual(eqObjects(cd, cd2), true);
+assertEqual(eqObjects(cd, cd2), false);

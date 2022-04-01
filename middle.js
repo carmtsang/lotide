@@ -11,8 +11,8 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const assertArraysEqual = function(actual, expected) {
-  const passed = `\uD83D\uDE00\uD83D\uDE00\uD83D\uDE00 Assertion Passed: ${actual} === ${expected}`;
-  const failed = `\uD83D\uDE31\uD83D\uDE31\uD83D\uDE31 Assertion Failed: ${actual} !== ${expected}`;
+  const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
+  const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
   if (actual.length !== expected.length) {
     console.log(failed);
     for (let i = 0; i < actual.length; i++) {
