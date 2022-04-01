@@ -8,10 +8,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//eqObjects should take in two objects and return a true/false based on a perfect match
-
-//return true if both objects have identical keys with identical values
-//otherwise return false
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
@@ -25,7 +21,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-
+// function to compare if two objects are equal
 const eqObjects = function(object1, object2) {
   let result = true;
   for (const key in object1) { //loop through obj1 for keys
@@ -36,7 +32,7 @@ const eqObjects = function(object1, object2) {
     } else {
       if (object1[key] !== object2[key]) { //if not array, check of object1 keys marches obj2 keys
         result = false;
-    }
+      }
     }
   }
   for (const key2 in object2) {
@@ -49,17 +45,29 @@ const eqObjects = function(object1, object2) {
         result = false;
       }
     }
-
   }
   return result;
-}
+};
+//come back to this in the future...
+// const eqObjects = function(object1, object2) {
+//   const objKeys1 = Object.keys(object1);
+//   const objKeys2 = Object.keys(object2);
+//   let result;
+
+//   if (objKeys1.length !== objKeys2.length) {
+//     result = false;
+//   }
+//   for (const key of objKeys1) {
+    
+// };
+
 
 // test code
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// eqObjects(ab, ba); // true
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+eqObjects(ab, ba); // true
 
-// assertEqual(eqObjects(ab, ba), true);
+assertEqual(eqObjects(ab, ba), true);
 
 // const abc = { a: "1", b: "2", c: "3" };
 // eqObjects(ab, abc); // false
