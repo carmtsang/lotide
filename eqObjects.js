@@ -53,17 +53,22 @@ const eqObjects = function(object1, object2) {
   const objKeys2 = Object.keys(object2);
   let result;
 
-  if (objKeys1.length !== objKeys2.length) {
+  if (objKeys1.length !== objKeys2.length) { //if obj1 length does not equal ob2 length 
     result = false;
-    return result;
+    return result; //return false and exit out of the function
   };
 
   for (const key of objKeys1) {
-    if (object1[key] !== object2[key]) {
-      result = false;
-      break;
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { //if obj 1 and ob2 have array
+      result = eqArrays(object1[key], object2[key]); //compare the value arrays with eqArrays and return its result
+      return result;
     } else {
-      result = true;
+      if (object1[key] !== object2[key]) { // if keys do not match return false
+        result = false;
+        break;
+      } else {
+        result = true;
+      }
     }
   }
   return result; 
@@ -71,24 +76,24 @@ const eqObjects = function(object1, object2) {
 
 
 // test code
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-// eqObjects(ab, ba); // true
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// // eqObjects(ab, ba); // true
 
-//assertEqual(eqObjects(ab, ba), true);
+// assertEqual(eqObjects(ab, ba), true);
 
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // false
+// const abc = { a: "1", b: "2", c: "3" };
+// eqObjects(ab, abc); // false
 
-assertEqual(eqObjects(ab, abc), false);
+// assertEqual(eqObjects(ab, abc), false);
 
 //array testing
 
-// const cd = { c: "1", d: ["2", 3] };
-// const dc = { d: ["2", 3], c: "1" };
-// eqObjects(cd, dc); // => true
-// //assertEqual(eqObjects(cd, dc), true);
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+eqObjects(cd, dc); // => true
+assertEqual(eqObjects(cd, dc), true);
 
-// const cd2 = { c: "1", d: ["2", 3, 4] };
-// eqObjects(cd, cd2); // => false
-//assertEqual(eqObjects(cd, cd2), false);
+const cd2 = { c: "1", d: ["2", 3, 4] };
+eqObjects(cd, cd2); // => false
+assertEqual(eqObjects(cd, cd2), false);
