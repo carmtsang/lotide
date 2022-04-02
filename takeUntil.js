@@ -2,16 +2,14 @@
 const takeUntil = (array, callback) => {
   const result = [];
   for (let element of array) {
-    if (callback(element)) {
+    if (callback(element)) { //if callback of element = true, break the loop
       break;
     } else {
-      result.push(element);
+      result.push(element); //else push element to new array.
     }
-    }
+  }
   return result;
 };
-
-
 
 //test cases
 
@@ -27,8 +25,7 @@ const results2 = takeUntil(data2, x => x === ',');
 
 console.log(results2);
 
-
-//expected results 
+//expected results
 // [ 1, 2, 5, 7, 2 ]
 // --
 // [ 'I\'ve', 'been', 'to', 'Hollywood' ]

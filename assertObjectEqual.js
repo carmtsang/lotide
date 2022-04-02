@@ -46,7 +46,7 @@ const assertObjectEqual = function(actual, expected) {
   } else {
     console.log(failed);
   }
-}
+};
 
-assertObjectEqual({ c: "1", d: ["2", 3] }, { d: ["2", 3], c: "1" })
-assertObjectEqual({ c: "5", d: ["2", 3], a: [1, "1", 5] }, { d: ["2", 3], c: "1" })
+assertObjectEqual({ c: "1", d: ["2", 3] }, { d: ["2", 3], c: "1" });
+assertObjectEqual({ c: "5", d: ["2", 3], a: [1, "1", 5] }, { d: ["2", 3], c: "1" });
