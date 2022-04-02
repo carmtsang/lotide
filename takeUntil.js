@@ -1,11 +1,17 @@
 //function to return a 'slice of array with elements taken from the beginning'. It should keep going until the callback/predicate returns a truthy value
 const takeUntil = (array, callback) => {
   const result = [];
-  for (const element of array) {
-    
-  }
+  for (let element of array) {
+    if (callback(element)) {
+      break;
+    } else {
+      result.push(element);
+    }
+    }
   return result;
 };
+
+
 
 //test cases
 
@@ -17,6 +23,8 @@ console.log('---');
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
+
+
 console.log(results2);
 
 
