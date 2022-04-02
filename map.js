@@ -5,15 +5,13 @@ const words = ["ground", "control", "to", "major", "tom"];
 const map = (array, callback) => {
   const results = [];
   for (let item of array) {
-    console.log(`item Before: ${item}`);
-    console.log(`item AFTER: ${callback(item)}`);
-    console.log('---')
+    results.push(callback(item));
   }
-
   return results;
 };
 
 const result1 = map(words, word => word[0]);
+const result2 = map(words, word => word.length);
 
-
-console.log(result1)
+console.log(result1);
+console.log(result2);
