@@ -13,4 +13,4 @@ describe('#eqArrays', () => {
   it('should return false if arr1 is [1, 2, 3] and arr2 is [1, "2", 3]', () => {
     assert.strictEqual(eqArrays([1, 2, 3],[1, '2', 3]), false);
   });
-})
+});

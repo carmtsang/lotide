@@ -13,8 +13,8 @@ const assert = require('chai').assert;
 describe('#tails', () => {
   it('should return [2, 3] from [1, 2, 3]', () => {
     assert.deepEqual(tail([1, 2, 3]), [2, 3]);
-  })
+  });
   it('should return an empty array when the array only has one number', () => {
     assert.deepEqual(tail([1]), []);
-  })
-})
+  });
+});
