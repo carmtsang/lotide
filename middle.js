@@ -1,24 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
 
-const assertArraysEqual = function(actual, expected) {
-  const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
-  const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
-  if (eqArrays(actual, expected)) {
-    console.log(passed);
-  } else {
-    console.log(failed);
-  }
-};
 // take in an array and return the middle-most elements of the given array
 //for array with 1 or two elements, there is no middle - return an empty array
 // odd number array - return a single element
@@ -39,11 +19,4 @@ const middle = function(array) {
   return arrayMid;
 };
 
-//test code
-middle([1]); // => []
-middle([1, 2]); // => []
-middle([1, 2, 3]); // => [2]
-middle([1, 2, 3, 4, 5]); // => [3]
-middle([1, 2, 3, 4]); // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+module.exports = middle;
