@@ -40,3 +40,5 @@ const letterPositions = function(sentence) {
 
 //test cases
 letterPositions('lighthouse in the house');
+
+module.exports = letterPositions;

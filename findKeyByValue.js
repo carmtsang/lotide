@@ -42,3 +42,5 @@ const bestMoviesByGenre = {
 
 assertEqual(findKeyByValue(bestMoviesByGenre, "Parasite"), "drama");
 assertEqual(findKeyByValue(bestMoviesByGenre, "Parasite"), undefined);
+
+module.exports = findKeyByValue;

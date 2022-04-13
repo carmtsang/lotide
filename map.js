@@ -39,3 +39,5 @@ const result2 = map(words, word => word.length);
 assertArraysEqual(result2, [6, 7, 2, 5, 3]);
 assertArraysEqual(map(numbers, num => num * 2), [2, 4, 6, 8, 10]);
 assertArraysEqual(map(numbers, num => num + 5), [6, 7, 8, 9, 10]);
+
+module.exports = map;

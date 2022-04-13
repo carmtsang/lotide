@@ -74,7 +74,6 @@ const eqObjects = function(object1, object2) {
   return result;
 };
 
-
 // test code
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
@@ -97,3 +96,5 @@ assertEqual(eqObjects(cd, dc), true);
 const cd2 = { c: "1", d: ["2", 3, 4] };
 eqObjects(cd, cd2); // => false
 assertEqual(eqObjects(cd, cd2), false);
+
+module.exports = eqObjects;

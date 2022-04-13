@@ -25,3 +25,5 @@ const countLetters = function(sentence) {
 countLetters('Carmen Tsang');
 countLetters('Lighthouse Labs');
 countLetters('bananarama');
+
+module.exports = countLetters;

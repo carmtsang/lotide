@@ -37,3 +37,5 @@ const test1 = findKey({
   "post_apocalyptic": "The Walking Dead"
 }, x => x === "The Walking Dead");
 assertEqual(test1, 'thriller');
+
+module.exports = findKey;

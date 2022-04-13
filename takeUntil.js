@@ -49,3 +49,5 @@ assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
 const data3 = [1, 10, 57, 26, 100, 278, 500];
 const result3 = takeUntil(data3, x => x === 100);
 assertArraysEqual(result3,[1, 10, 57, 26]);
+
+module.exports = takeUntil;
