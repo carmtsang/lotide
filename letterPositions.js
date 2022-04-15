@@ -1,30 +1,8 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
-  const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
-  if (eqArrays(actual, expected)) {
-    console.log(passed);
-  } else {
-    console.log(failed);
-  }
-};
-
-
+const assertArraysEqual = require('./assertArraysEqual')
 
 // function that will return all the indices in the string
 
-const letterPositions = function(sentence) {
+const letterPositions = sentence => {
   const results = {};
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] !== ' ') {

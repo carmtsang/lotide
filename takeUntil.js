@@ -1,25 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
-  const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
-  if (eqArrays(actual, expected)) {
-    console.log(passed);
-  } else {
-    console.log(failed);
-  }
-};
-
+const assertArraysEqual = require('./assertArraysEqual')
 
 //function to return a 'slice of array with elements taken from the beginning'. It should keep going until the callback/predicate returns a truthy value
 const takeUntil = (array, callback) => {

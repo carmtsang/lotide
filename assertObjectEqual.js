@@ -1,16 +1,6 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
-const eqObjects = function(object1, object2) {
+const eqObjects = (object1, object2) => {
   const objKeys1 = Object.keys(object1);
   const objKeys2 = Object.keys(object2);
   let result;
@@ -36,7 +26,7 @@ const eqObjects = function(object1, object2) {
   return result;
 };
 
-const assertObjectEqual = function(actual, expected) {
+const assertObjectEqual = (actual, expected) => {
   const inspect = require('util').inspect;
   const passed = `😁😁😁 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`;
   const failed = `😱😱😱 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;

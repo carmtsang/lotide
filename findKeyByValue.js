@@ -1,18 +1,10 @@
-const assertEqual = function(actual, expected) {
-  const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
-  const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
-  if (actual === expected) {
-    console.log(passed);
-  } else {
-    console.log(failed);
-  }
-};
+const assertEqual = require('./assertEqual')
 
 //loop through the object
 //if searchValue = object value
 //return object key
 
-const findKeyByValue = function(objList, searchValue) {
+const findKeyByValue = (objList, searchValue) => {
   const keys = Object.keys(objList); //turn object keys into an array
   for (const key of keys) {
     if (objList[key] === searchValue) {

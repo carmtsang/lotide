@@ -1,5 +1,4 @@
-//Function Implementation
-const assertEqual = function(actual, expected) {
+const assertEqual = (actual, expected) => {
   const passed = `😁😁😁 Assertion Passed: ${actual} === ${expected}`;
   const failed = `😱😱😱 Assertion Failed: ${actual} !== ${expected}`;
   if (actual === expected) {

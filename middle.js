@@ -1,10 +1,9 @@
-
 // take in an array and return the middle-most elements of the given array
 //for array with 1 or two elements, there is no middle - return an empty array
 // odd number array - return a single element
 // even number array - return 2 elements
 
-const middle = function(array) {
+const middle = array => {
   let arrayMid = [];
   let midIndex = Math.floor(array.length / 2);
   //Math.floor for whole number for the middle of the array.
