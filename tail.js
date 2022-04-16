@@ -1,5 +1,4 @@
-const tail = function(arr) {
-  return arr.slice(1);
-};
+const tail = arr => arr.slice(1);
+//return the array without the first value;
 
 module.exports = tail;
