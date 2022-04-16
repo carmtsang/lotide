@@ -1,22 +1,15 @@
-const assertArraysEqual = require('./assertArraysEqual')
-
-//flatten to take in an array with elements that include nested arrays and return a flattened version of the array.
-//return new array
+//flatten to take in an array with elements that include nested arrays and return a flattened version of the array and return a new array
 
 const flatten = unflatArray => {
   let flatArray = [];
   for (const element of unflatArray) {
     if (Array.isArray(element)) {
-      flatArray = flatArray.concat(element);
+      flatArray = flatArray.concat(element); //if the value is an array, use concat to merge the arrays
     } else {
-      flatArray.push(element);
+      flatArray.push(element); //if not an array, push value to the flatArray variable
     }
   }
   return flatArray;
 };
-
-//test case
-console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
-console.log(flatten([1, 2, [3, 4, [5, 6]]]));
 
 module.exports = flatten;
