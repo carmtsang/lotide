@@ -2,12 +2,13 @@ const assertEqual = require('./assertEqual');
 //allItems - an array of strings that we need to look through.
 // itemsToCount - an object specifying what to count
 const countOnly = (allItems, itemsToCount) => {
-  const results = {};
+  const results = {}; //create an empty object
   for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (results[item] += 1) {
+    if (itemsToCount[item]) { //for each item if
+      if (results[item]) { //
+        results[item] += 1; //if it exists, add an additonal one
       } else {
-        results[item] = 1;
+        results[item] = 1; //else there is 1 of that item
       }
     }
   }

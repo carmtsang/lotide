@@ -1,7 +1,6 @@
-const assertArraysEqual = require('./assertArraysEqual')
+const assertArraysEqual = require('./assertArraysEqual');
 
 // function that will return all the indices in the string
-
 const letterPositions = sentence => {
   const results = {};
   for (let i = 0; i < sentence.length; i++) {

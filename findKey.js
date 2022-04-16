@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual')
+const assertEqual = require('./assertEqual');
 
 //find keyshould take an object and a call back, it should scan the object and return the first key that returns a truthy value
 //if no key, return undefined.

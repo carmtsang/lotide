@@ -3,7 +3,7 @@
 const map = (array, callback) => {
   const results = [];
   for (let item of array) {
-    results.push(callback(item));
+    results.push(callback(item)); //perform the callback function to each item of the array & push to results
   }
   return results;
 };

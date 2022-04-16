@@ -1,4 +1,4 @@
-const assertArraysEqual = require('./assertArraysEqual')
+const assertArraysEqual = require('./assertArraysEqual');
 
 //function to return a 'slice of array with elements taken from the beginning'. It should keep going until the callback/predicate returns a truthy value
 const takeUntil = (array, callback) => {

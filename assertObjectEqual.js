@@ -1,4 +1,4 @@
-const eqObjects = require('./eqObjects')
+const eqObjects = require('./eqObjects');
 
 const assertObjectEqual = (actual, expected) => {
   const inspect = require('util').inspect; //for printing out the arrays in the object
