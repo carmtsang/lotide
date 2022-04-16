@@ -1,33 +1,7 @@
-const eqArrays = require('./eqArrays');
-
-const eqObjects = (object1, object2) => {
-  const objKeys1 = Object.keys(object1);
-  const objKeys2 = Object.keys(object2);
-  let result;
-
-  if (objKeys1.length !== objKeys2.length) { //if obj1 length does not equal ob2 length
-    result = false;
-    return result; //return false and exit out of the function
-  }
-
-  for (const key of objKeys1) {
-    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { //if obj 1 and ob2 have array
-      result = eqArrays(object1[key], object2[key]); //compare the value arrays with eqArrays and return its result
-      return result;
-    } else {
-      if (object1[key] !== object2[key]) { // if keys do not match return false
-        result = false;
-        break;
-      } else {
-        result = true;
-      }
-    }
-  }
-  return result;
-};
+const eqObjects = require('./eqObjects')
 
 const assertObjectEqual = (actual, expected) => {
-  const inspect = require('util').inspect;
+  const inspect = require('util').inspect; //for printing out the arrays in the object
   const passed = `😁😁😁 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`;
   const failed = `😱😱😱 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;
 
@@ -40,3 +14,5 @@ const assertObjectEqual = (actual, expected) => {
 
 assertObjectEqual({ c: "1", d: ["2", 3] }, { d: ["2", 3], c: "1" });
 assertObjectEqual({ c: "5", d: ["2", 3], a: [1, "1", 5] }, { d: ["2", 3], c: "1" });
+
+module.exports = assertObjectEqual;

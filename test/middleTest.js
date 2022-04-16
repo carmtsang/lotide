@@ -7,7 +7,7 @@ const assert = require('chai').assert;
 // middle([1, 2]); // => []
 // middle([1, 2, 3]); // => [2]
 // assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); 
+// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
 // middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
 // assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
 
@@ -26,5 +26,5 @@ describe('#middle', () => {
   });
   it('should return 1 number for the middle for an odd number array', () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
-  })
-})
+  });
+});

@@ -8,8 +8,8 @@ describe("#findKeyByValue", () => {
       comedy: "Brooklyn Nine-Nine",
       drama:  "The Wire"
     };
-    let value = 'The Wire'
-    assert.deepEqual(findKeyByValue(inputObject, value), 'drama')
+    let value = 'The Wire';
+    assert.deepEqual(findKeyByValue(inputObject, value), 'drama');
   });
 });
 
