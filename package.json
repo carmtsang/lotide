@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@carmtsang/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "a mini clone of the lodash library, created for learning purposes.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/carmtsang/lotide.git"
   },
-  "author": "",
+  "author": "Carmen Tsang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/carmtsang/lotide/issues"
